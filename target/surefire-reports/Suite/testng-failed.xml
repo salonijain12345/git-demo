@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="saloni.testcomponents.Listeners"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="ErrorValidations(failed)" verbose="0">
+    <classes>
+      <class name="saloni.projectfarmework.ErrorValidations">
+        <methods>
+          <include name="teardown"/>
+          <include name="launchApplication"/>
+          <include name="errorproduct"/>
+        </methods>
+      </class> <!-- saloni.projectfarmework.ErrorValidations -->
+    </classes>
+  </test> <!-- ErrorValidations(failed) -->
+  <test thread-count="5" parallel="tests" name="submit order Test(failed)" verbose="0">
+    <classes>
+      <class name="saloni.projectfarmework.submitordertest">
+        <methods>
+          <include name="orderhistorytest"/>
+          <include name="teardown"/>
+          <include name="launchApplication"/>
+          <include name="submitOrder" invocation-numbers="0 1"/>
+        </methods>
+      </class> <!-- saloni.projectfarmework.submitordertest -->
+    </classes>
+  </test> <!-- submit order Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

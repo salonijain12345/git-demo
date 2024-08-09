@@ -1,0 +1,16 @@
+name: Suite
+parallel: tests
+configFailurePolicy: skip
+listeners:
+  - saloni.testcomponents.Listeners
+tests:
+  - name: submit order Test
+  parallel: tests
+  classes:
+    - saloni.projectfarmework.submitordertest
+
+  - name: ErrorValidations
+  parallel: tests
+  classes:
+    - saloni.projectfarmework.ErrorValidations
+
